@@ -19,4 +19,4 @@ Modify the database host/port and other related configurations to your own infor
 ## Thanks
 [Liu Xiaochao/iwind](https://github.com/iwind)
 
-[lxpmoon](https://github.com/lxpmoon)
+[lxp_kidd/lxphelloworld](https://github.com/lxphelloworld)

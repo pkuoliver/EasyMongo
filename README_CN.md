@@ -33,4 +33,4 @@ cp config.sample.php config.php
 ## 致谢
 [Liu Xiaochao/iwind](https://github.com/iwind)
 
-[lxpmoon](https://github.com/lxpmoon)
+[lxp_kidd/lxphelloworld](https://github.com/lxphelloworld)
