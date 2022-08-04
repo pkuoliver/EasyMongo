@@ -1,5 +1,10 @@
-# EasyMongo [中文版说明](./README_CN.md)
-EasyMongo is a Mongodb web management application. This project is based on [iwind/RockMongo](https://github.com/iwind/rockmongo), uses the latest mongodb extension + phplib mode, supports Mongodb3.0+, and all versions above php5.6.
+# EasyMongo 
+EasyMongo is a Mongodb web management application. This project is based on [iwind/RockMongo](https://github.com/iwind/rockmongo), uses the latest [mongodb-extension](https://pecl.php.net/package/mongodb) + [mongo-php-library](https://github.com/mongodb/mongo-php-library) mode, supports Mongodb3.0+, and all php versions above 5.6. [中文版说明](./README_CN.md)
+
+## Compatibility
+MongoDB: All version above 3.0
+
+PHP: All version above 5.6
 
 ## Installation
 Make sure that the mongodb extension is installed, then execute the following command:

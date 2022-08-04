@@ -1,9 +1,9 @@
 # EasyMongo
-Mongodb Web管理应用，本项目基于[RockMongo](https://github.com/iwind/rockmongo)，使用最新的mongodb扩展+phplib模式，支持Mongodb3.0+，以及php5.6以上所有版本。
+Mongodb Web管理应用，本项目基于[RockMongo](https://github.com/iwind/rockmongo)，使用最新的[mongodb扩展](https://pecl.php.net/package/mongodb) + [mongo-php-library](https://github.com/mongodb/mongo-php-library)模式，支持Mongodb3.0+，以及php5.6以上所有版本。
 
 
 ## 广泛的版本支持
-MongoDB: Ver3.0及以上版本
+MongoDB: 3.0及以上所有版本
 
 PHP: php5.6, php7.x, php8.x
 
@@ -20,7 +20,7 @@ PHP: php5.6, php7.x, php8.x
 ~~~
 git clone https://github.com/pkuoliver/EasyMongo.git
 ~~~
-然后安装phplib
+然后用[Composer](https://getcomposer.org/)安装mongo-php-library
 ~~~
 composer require mongodb/mongodb
 ~~~

@@ -108,78 +108,10 @@ class VarEval {
 	}
 
 	private function _runJson() {
-		var_dump($this->_source);
+		//var_dump($this->_source);
 		$this->_source = formatJsonQuery($this->_source);
-		var_dump($this->_source);
-		$timezone = @date_default_timezone_get();
-		date_default_timezone_set("UTC");
-		/*$ret = $this->_db->execute('function () {
-			if (typeof(ISODate) == "undefined") {
-				function ISODate (isoDateStr) {
-					if (!isoDateStr) {
-						return new Date;
-					}
-					var isoDateRegex = /(\d{4})-?(\d{2})-?(\d{2})([T ](\d{2})(:?(\d{2})(:?(\d{2}(\.\d+)?))?)?(Z|([+-])(\d{2}):?(\d{2})?)?)?/;
-					var res = isoDateRegex.exec(isoDateStr);
-					if (!res) {
-						throw "invalid ISO date";
-					}
-					var year = parseInt(res[1], 10) || 1970;
-					var month = (parseInt(res[2], 10) || 1) - 1;
-					var date = parseInt(res[3], 10) || 0;
-					var hour = parseInt(res[5], 10) || 0;
-					var min = parseInt(res[7], 10) || 0;
-					var sec = parseFloat(res[9]) || 0;
-					var ms = Math.round(sec % 1 * 1000);
-					sec -= ms / 1000;
-					var time = Date.UTC(year, month, date, hour, min, sec, ms);
-					if (res[11] && res[11] != "Z") {
-						var ofs = 0;
-						ofs += (parseInt(res[13], 10) || 0) * 60 * 60 * 1000;
-						ofs += (parseInt(res[14], 10) || 0) * 60 * 1000;
-						if (res[12] == "+") {
-							ofs *= -1;
-						}
-						time += ofs;
-					}
-					return new Date(time);
-				};
-			};
-
-			function r_util_convert_empty_object_to_string(obj) {
-				if (r_util_is_empty(obj)) {
-					return "__EMPTYOBJECT__";
-				}
-				if (typeof(obj) == "object") {
-					for (var k in obj) {
-						obj[k] = r_util_convert_empty_object_to_string(obj[k]);
-					}
-				}
-				return obj;
-			};
-
-			function r_util_is_empty(obj) {
-				if (obj == null || typeof(obj) != "object" || (obj.constructor != Object)) {
-					return false;
-				}
-				for(var k in obj) {
-					if(obj.hasOwnProperty(k)) {
-						return false;
-					}
-				}
-
-				return true;
-			};
-			var o = ' . $this->_source . '; return r_util_convert_empty_object_to_string(o); }'
-		);
-
-		$this->_fixEmptyObject($ret);
-		date_default_timezone_set($timezone);
-		if ($ret["ok"]) {
-			return $ret["retval"];
-		}
-		*/
-		var_dump(json_decode($this->_source, true));
+		//var_dump($this->_source);
+		//var_dump(json_decode($this->_source, true));
 		return json_decode($this->_source, true);
 	}
 
