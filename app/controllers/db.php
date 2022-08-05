@@ -34,7 +34,7 @@ class DbController extends BaseController {
 			$ret["indexSize"] = r_human_bytes($ret["indexSize"]);
 		}
 
-
+		// Database Statistics
 		$this->stats = array();
 		$this->stats["Size"] = $ret["diskSize"];
 		$this->stats["Is Empty?"] = "No";
@@ -44,9 +44,9 @@ class DbController extends BaseController {
 			$this->stats["Collections"] .= "<br/>No collections yet";
 		} else {
 			$key = "Collections<br/>[<a href=\"" . $this->path("db.dropDbCollections", array( "db" => $this->db )) . "\" onclick=\"return window.confirm('Are you sure to drop all collections in the db?')\"><u>Drop All</u></a>]<br/>[<a href=\"" . $this->path("clearDbCollections", array( "db" => $this->db )) . "\" onclick=\"return window.confirm('Are you sure to clear all records in all collections?')\"><u>Clear All</u></a>]";
-			$this->stats[$key] = count($collections) . " collections:";
+			$this->stats[$key] = count($collections) . " collections:<br>";
 			foreach ($collections as $collection) {
-				$this->stats[$key] .= "<br/><a href=\""
+				$this->stats[$key] .= "   <a href=\""
 					. $this->path("collection.index", array( "db" => $this->db, "collection" => $collection->getCollectionName())) . "\">" . $collection->getCollectionName() . "</a>";
 			}
 		}
@@ -82,6 +82,16 @@ class DbController extends BaseController {
 		}
 		if (isset($ret["extentFreeList"])) {
 			$this->stats["Extent Free List"] = $this->_highlight($ret["extentFreeList"], "json");
+		}
+
+		//Collections Statistics
+		foreach($collections as $collection) {
+			$name = $collection->getCollectionName();
+			$colls[] = $name;
+			$cmdRst = $db->command(['collStats' => $name, 'scale'=>1]);
+			$info = $cmdRst->toArray()[0];
+			$statInfo = DbController::formatStatInfo($info);
+			$this->colls_stats[] = $statInfo;
 		}
 
 		$this->display();
@@ -508,6 +518,19 @@ window.parent.frames["left"].location.reload();
 		$ret = $this->_mongo->dropDB($this->db);
 		$this->ret = $this->_highlight($ret, "json");
 		$this->display("dropDatabaseResult");
+	}
+
+	private static function formatStatInfo($info) {
+		return [
+			'Name'		=> $info['ns'], 
+			'Count'		=> $info['count'], 
+			'ObjSize'	=> r_human_bytes(isset($info['avgObjSize'])?$info['avgObjSize']:0), 
+			'Size'		=> r_human_bytes($info['size']), 
+			'DiskSize'	=> r_human_bytes($info['storageSize']), 
+			'IdxSize'	=> r_human_bytes($info['totalIndexSize']), 
+			'IdxCount'	=> $info['nindexes'], 
+			'IdxDetail'	=> $info['indexSizes'], 
+		];
 	}
 }
 
