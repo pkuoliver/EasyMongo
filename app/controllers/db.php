@@ -159,10 +159,8 @@ class DbController extends BaseController {
 			$targetConnection = new RMongo($uri, $targetOptions);
 			$targetDb = $targetConnection->selectDB($this->db);
 			if ($this->target_auth) {
-				// "authenticate" can only be used between 1.0.1 - 1.2.11
-				if (RMongo::compareVersion("1.0.1") >= 0 && RMongo::compareVersion("1.2.11") < 0) {
-					$targetDb->authenticate($this->target_username, $this->target_password);
-				}
+				// TODO 这里未经验证
+				$targetDb->command(['auth'=>1, $this->target_username, $this->target_password])->toArray()[0];
 			}
 			$errors = array();
 			foreach ($this->selectedCollections as $collectionName) {
@@ -294,10 +292,12 @@ class DbController extends BaseController {
 						$this->error2 = "Please enter the collection name";
 					} else {
 						$lines = explode("\n", $body);
+						$coll = $this->_mongo->selectDB($this->db)->selectCollection($collection);
 						foreach ($lines as $line) {
 							$line = trim($line);
 							if ($line) {
-								$ret = $this->_mongo->selectDB($this->db)->execute('function (c, o){ o=eval("(" + o + ")"); db.getCollection(c).insert(o); }', array( $collection, $line ));
+								//$ret = $this->_mongo->selectDB($this->db)->execute('function (c, o){ o=eval("(" + o + ")"); db.getCollection(c).insert(o); }', array( $collection, $line ));
+								$ret = $coll->insertOne(json_decode($line, true));
 							}
 						}
 
@@ -352,12 +352,13 @@ class DbController extends BaseController {
 		$this->db = xn("db");
 
 		$db = $this->_mongo->selectDB($this->db);
-		$query1 = $db->command(['getProfilingLevel'=>1]);
+		$query1 = $db->command(['getProfilingLevel'=>1])->toArray()[0];
 		$this->level = $query1["retval"];
 		if (x("go") == "save_level") {
 			$level = xi("level");
 			$slowms = xi("slowms");
-			$db->execute("function(level,slowms) { db.setProfilingLevel(level,slowms); }", array($level, $slowms));
+			//$db->execute("function(level,slowms) { db.setProfilingLevel(level,slowms); }", array($level, $slowms));
+			$db->command(['profile'=>$level, 'slowms'=>$slowms]);
 			$this->level = $level;
 		} else {
 			x("slowms", 50);
@@ -372,13 +373,14 @@ class DbController extends BaseController {
 
 		$query1 = $db->execute("function (){ return db.getProfilingLevel(); }");
 		$oldLevel = $query1["retval"];
-		$db->execute("function(level) { db.setProfilingLevel(level); }", array(0));
-		$ret = $db->selectCollection("system.profile")->drop();
-		$db->execute("function(level) { db.setProfilingLevel(level); }", array($oldLevel));
+		//$db->execute("function(level) { db.setProfilingLevel(level); }", array(0));
+		$db->command(['profile'=>0]);
+		//$ret = $db->selectCollection("system.profile")->drop();
+		$ret = $db->dropCollection("system.profile");
+		//$db->execute("function(level) { db.setProfilingLevel(level); }", array($oldLevel));
+		$db->command(['profile'=>$oldLevel]);
 
-		$this->redirect("db.profile", array(
-			"db" => $this->db
-		));
+		$this->redirect("db.profile", ["db" => $this->db]);
 	}
 
 	/** authentication **/
@@ -398,10 +400,9 @@ class DbController extends BaseController {
 		$this->db = xn("db");
 		$db = $this->_mongo->selectDB($this->db);
 
-		$db->execute("function (username){ db.removeUser(username); }", array(xn("user")));
-		$this->redirect("db.auth", array(
-			"db" => $this->db
-		));
+		//$db->execute("function (username){ db.removeUser(username); }", array(xn("user")));
+		$db->command(['dropUser'=>xn("user")]);
+		$this->redirect("db.auth", ["db" => $this->db]);
 	}
 
 	/** add user **/
@@ -432,15 +433,15 @@ class DbController extends BaseController {
 			return;
 		}
 		$db = $this->_mongo->selectDB($this->db);
-		$db->execute("function (username, pass, readonly){ db.addUser(username, pass, readonly); }", array(
-			$username,
-			$password,
-			x("readonly") ? true : false
-		));
+		// $db->execute("function (username, pass, readonly){ db.addUser(username, pass, readonly); }", array(
+		// 	$username,
+		// 	$password,
+		// 	x("readonly") ? true : false
+		// ));
+		$role = x("readonly") ? 'read' : 'readWrite';
+		$db->command(['createUser'=>$username, 'pwd'=>$password, 'roles'=>['role'=>$role]]);
 
-		$this->redirect("auth", array(
-			"db" => $this->db
-		));
+		$this->redirect("auth", ["db" => $this->db]);
 	}
 
 	/** create new collection **/
