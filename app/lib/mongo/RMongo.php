@@ -261,6 +261,16 @@ class RMongo {
 	}
 
 	/**
+	 * Get mongo php library version
+	 *
+	 * @return string
+	 */
+	public static function getLibraryVersion() {
+		//return \Composer\InstalledVersions::getVersion('mongodb/mongodb');
+		return Jean85\PrettyVersions::getVersion('mongodb/mongodb')->getPrettyVersion();
+	}
+
+	/**
 	 * Compare another version with current version
 	 *
 	 * @param string $version Version to compare
