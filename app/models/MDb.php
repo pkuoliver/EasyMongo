@@ -64,6 +64,56 @@ class MDb {
 		}
 		return $collections;
 	}
+
+	
+	/**
+	 * List collections in a DB
+	 *
+	 * @param MongoDB $db DB
+	 * @return array<MongoCollection>
+	 */
+	static function getCollectionNames(MongoDB\Database $db) {
+		$server = MServer::currentServer();
+
+		$names = array();
+		$colls = $db->listCollections();
+		foreach($colls as $coll) {
+			$names[] = $coll->getName();
+		}
+
+		$ret = array();
+		foreach ($names as $name) {
+			if ($server->shouldHideCollection($name)) {
+				continue;
+			}
+			if (preg_match("/^system\\./", $name)) {
+				continue;
+			}
+			$ret[] = $name;
+		}
+		sort($ret);
+
+		//system collections
+		if (!$server->uiHideSystemCollections()) {
+			foreach ($names as $name) {
+				if ($server->shouldHideCollection($name)) {
+					continue;
+				}
+				if (preg_match("/^system\\./", $name)) {
+					$ret[] = $name;
+				}
+			}
+		}
+		
+		$collections = array();
+		foreach ($ret as $name) {
+			if ($name === "") {//older MongoDB version (maybe before 1.7) allow empty collection name
+				continue;
+			}
+			$collections[] = $name;
+		}
+		return $collections;
+	}
 }
 
 ?>

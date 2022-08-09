@@ -60,9 +60,9 @@ $(function () {
 		<th><?php hm("name"); ?></th>
 		<th><?php hm("size"); ?></th>
 		<th nowrap><?php hm("storagesize"); ?></th>
-		<th nowrap><?php hm("datasize"); ?></th>
+		<th nowrap><?php hm("avg_obj_size"); ?></th>
 		<th nowrap><?php hm("indexsize"); ?></th>
-		<th><?php hm("Indexs"); ?></th>
+		<th><?php hm("index_count"); ?></th>
 		<th><?php hm("objects"); ?></th>
 	</tr>
 	<?php foreach ($colls_stats as $db):?>

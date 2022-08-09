@@ -226,23 +226,23 @@ currentFields.push("<?php h(addslashes($field));?>");
 
 <!-- field menu -->
 <div id="field_menu">
-	<a href="#" onclick="fieldOpUpdate(this);return false;" class="field_op_update">Update</a>
-	<a href="#" onclick="fieldOpQuery(this);return false;" class="field_op_query">Query</a>
-	<a href="#" onclick="fieldOpSort(this, 'asc');return false;" class="field_op_sort">SortASC</a>
-	<a href="#" onclick="fieldOpSort(this, 'desc');return false;" class="field_op_sort">SortDESC</a>
+	<a href="#" onclick="fieldOpUpdate(this);return false;" class="field_op_update"><?php hm("field_menu_update"); ?></a>
+	<a href="#" onclick="fieldOpQuery(this);return false;" class="field_op_query"><?php hm("field_menu_query"); ?></a>
+	<a href="#" onclick="fieldOpSort(this, 'asc');return false;" class="field_op_sort"><?php hm("field_menu_sortasc"); ?></a>
+	<a href="#" onclick="fieldOpSort(this, 'desc');return false;" class="field_op_sort"><?php hm("field_menu_sortdesc"); ?></a>
 	<span>------</span>
-	<a href="#" onclick="fieldOpRename(this);return false;" class="field_op_rename">Rename</a>
-	<a href="#" onclick="fieldOpRemove(this);return false;" class="field_op_remove">Remove</a>
-	<a href="#" onclick="fieldOpClear(this);return false;" class="field_op_clear">Clear</a>
+	<a href="#" onclick="fieldOpRename(this);return false;" class="field_op_rename"><?php hm("field_menu_rename"); ?></a>
+	<a href="#" onclick="fieldOpRemove(this);return false;" class="field_op_remove"><?php hm("field_menu_remove"); ?></a>
+	<a href="#" onclick="fieldOpClear(this);return false;" class="field_op_clear"><?php hm("field_menu_clear"); ?></a>
 	<?php if($canAddField): ?>
 	<span>------</span>
-	<a href="#" onclick="fieldOpNew(this);return false;" class="field_op_new">New</a>
+	<a href="#" onclick="fieldOpNew(this);return false;" class="field_op_new"><?php hm("field_menu_new"); ?></a>
 	<?php endif; ?>
 	<span>------</span>
-	<a href="#" onclick="fieldOpIndexes(this);return false;" class="field_op_indexes">Indexes</a>
+	<a href="#" onclick="fieldOpIndexes(this);return false;" class="field_op_indexes"><?php hm("field_menu_index"); ?></a>
 	<span class="field_op_hide_show_seperator">------</span>
-	<a href="#" onclick="fieldOpHide(this);return false;" class="field_op_hide">Hide</a>
-	<a href="#" onclick="fieldOpShow(this);return false;" class="field_op_show">Show</a>
+	<a href="#" onclick="fieldOpHide(this);return false;" class="field_op_hide"><?php hm("field_menu_hide"); ?></a>
+	<a href="#" onclick="fieldOpShow(this);return false;" class="field_op_show"><?php hm("field_menu_show"); ?></a>
 </div>
 
 
