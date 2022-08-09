@@ -17,7 +17,7 @@ class DbController extends BaseController {
 
 		//collections
 		$db = $this->_mongo->selectDB($this->db);
-		$collections = MDb::listCollections($db);
+		$collections = MDb::getCollectionNames($db);
 
 		$ret = array_merge($ret, $db->command(array("dbstats" => 1))->toArray()[0]);
 		$ret["diskSize"] = "-";
@@ -43,11 +43,13 @@ class DbController extends BaseController {
 			$this->stats["Collections"] = count($collections) . " collections:";
 			$this->stats["Collections"] .= "<br/>No collections yet";
 		} else {
-			$key = "Collections<br/>[<a href=\"" . $this->path("db.dropDbCollections", array( "db" => $this->db )) . "\" onclick=\"return window.confirm('Are you sure to drop all collections in the db?')\"><u>Drop All</u></a>]<br/>[<a href=\"" . $this->path("clearDbCollections", array( "db" => $this->db )) . "\" onclick=\"return window.confirm('Are you sure to clear all records in all collections?')\"><u>Clear All</u></a>]";
+			$key = "Collections<br/>[<a href=\"" . $this->path("db.dropDbCollections", array( "db" => $this->db )) . 
+				"\" onclick=\"return window.confirm('Are you sure to drop all collections in the db?')\"><u>Drop All</u></a>]<br/>[<a href=\"" . 
+				$this->path("clearDbCollections", array( "db" => $this->db )) . "\" onclick=\"return window.confirm('Are you sure to clear all records in all collections?')\"><u>Clear All</u></a>]";
 			$this->stats[$key] = count($collections) . " collections:<br>";
 			foreach ($collections as $collection) {
 				$this->stats[$key] .= "   <a href=\""
-					. $this->path("collection.index", array( "db" => $this->db, "collection" => $collection->getCollectionName())) . "\">" . $collection->getCollectionName() . "</a>";
+					. $this->path("collection.index", array( "db" => $this->db, "collection" => $collection)) . "\">" . $collection . "</a> | ";
 			}
 		}
 		if(isset($ret["objects"])) {
@@ -85,13 +87,16 @@ class DbController extends BaseController {
 		}
 
 		//Collections Statistics
-		foreach($collections as $collection) {
-			$name = $collection->getCollectionName();
-			$colls[] = $name;
-			$cmdRst = $db->command(['collStats' => $name, 'scale'=>1]);
-			$info = $cmdRst->toArray()[0];
-			$statInfo = DbController::formatStatInfo($info);
-			$this->colls_stats[] = $statInfo;
+		foreach($collections as $name) {
+			try {
+				//$colls[] = $name;
+				$cmdRst = $db->command(['collStats' => $name, 'scale'=>1]);
+				$info = $cmdRst->toArray()[0];
+				$statInfo = DbController::formatStatInfo($info);
+				$this->colls_stats[] = $statInfo;
+			} catch(Exception $e) {
+
+			}
 		}
 
 		$this->display();

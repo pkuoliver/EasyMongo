@@ -1,5 +1,7 @@
 <?php
 
+use MongoDB\Operation\Explain;
+
 import("classes.BaseController");
 
 /**
@@ -161,8 +163,19 @@ class CollectionController extends BaseController {
 			$this->queryFields = array();
 		}
 
-		$indexRet = $db->selectCollection($this->collection)->listIndexes();
-		$this->recordsCount = $db->selectCollection($this->collection)->count();
+		$indexRet = [];
+		try{// if collection is view, will throw exception
+			$indexRet = $db->selectCollection($this->collection)->listIndexes();
+		} catch(Exception $e){}
+		
+		//php library >= 1.4 use countDocuments, else use count
+		$libVer = RMongo::getLibraryVersion();
+		if(version_compare($libVer, '1.4', '<')) {
+			$this->recordsCount = $db->selectCollection($this->collection)->count();
+		} else {
+			$this->recordsCount = $db->selectCollection($this->collection)->countDocuments();
+		}
+		
 		$indexFields = [];
 		foreach ($indexRet as $index => $indexField) {
 			$idxInfo = mongo_object_to_array($indexField);
