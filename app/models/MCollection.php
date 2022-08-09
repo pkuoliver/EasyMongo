@@ -51,27 +51,25 @@ class MCollection {
 	 * @param string $collection collection name
 	 */
 	public static function info(MongoDB\Database $db, $collection) {
-		$ret = $db->command(array( "collStats" => $collection ))->toArray()[0];
-
-		if (!$ret["ok"]) {
-			exit("There is something wrong:<font color=\"red\">{$ret['errmsg']}</font>, please refresh the page to try again.");
-		}
-		if (!isset($ret["retval"]["options"])) {
-			$ret["retval"]["options"] = array();
-		}
 		$isCapped = false;
 		$size = 0;
 		$max = 0;
-		$options = $ret["retval"]["options"];
-		if (isset($options["capped"])) {
-			$isCapped = $options["capped"];
+
+		try{
+			$options = $db->command(array("collStats" => $collection ))->toArray()[0];
+			if (isset($options["capped"])) {
+				$isCapped = $options["capped"];
+			}
+			if (isset($options["size"])) {
+				$size = $options["size"];
+			}
+			if (isset($options["max"])) {
+				$max = $options["max"];
+			}
+		} catch(Exception $e) {
+			//exit("There is something wrong: <font color=\"red\">{$e->getMessage()}</font>, please refresh the page to try again.");
 		}
-		if (isset($options["size"])) {
-			$size = $options["size"];
-		}
-		if (isset($options["max"])) {
-			$max = $options["max"];
-		}
+		
 		return array( "capped" => $isCapped, "size" => $size, "max" => $max );
 	}
 
@@ -83,12 +81,6 @@ class MCollection {
 	 * @param array $options Options, capped, size, max
 	 */
 	public static function createCollection(MongoDB\Database $db, $name, array $options) {
-		/*if (RMongo::compareVersion("1.4.0") >= 0) {
-			$db->createCollection($name, $options);
-		} else {
-			$db->createCollection($name, isset($options["capped"]) ? $options["capped"] : false, isset($options["size"]) ? $options["size"] : 0, isset($options["max"]) ? $options["max"] : 0);
-		}*/
-
 		// TODO 这里要判断数据库是否已经存在
 		$db->createCollection($name, $options);
 	}
