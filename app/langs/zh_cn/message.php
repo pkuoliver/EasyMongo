@@ -103,7 +103,9 @@ $message["dropwarning2"] = "本数据库中的所有数据都会丢失!";
 $message["createrow"] = "创建行";
 $message["storagesize"] = "存储大小";
 $message["datasize"] = "数据大小";
+$message["avg_obj_size"] = "单文档大小";
 $message["indexsize"] = "索引大小";
+$message["index_count"] = "索引数";
 $message["collections"] = "表个数";
 $message["objects"] = "文档数";
 $message["repairdbmsg"] = "确定要修复数据库";
@@ -135,6 +137,19 @@ $message["copycollection"] = "复制Collection";
 $message["to"] = "To";
 $message["removeifexists"] = "如果存在则删除目标?";
 $message["selectdb"] = "选择数据库";
+
+// collection action
+$message["field_menu_update"] = "更新";
+$message["field_menu_query"] = "查询";
+$message["field_menu_sortasc"] = "升序排序";
+$message["field_menu_sortdesc"] = "降序排序";
+$message["field_menu_rename"] = "重命名";
+$message["field_menu_remove"] = "删除字段";
+$message["field_menu_clear"] = "置空";
+$message["field_menu_new"] = "新建";
+$message["field_menu_index"] = "创建索引";
+$message["field_menu_hide"] = "隐藏";
+$message["field_menu_show"] = "展示";
 
 /** Add user **/
 $message["users"] = "用户";

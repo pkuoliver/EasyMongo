@@ -2,9 +2,6 @@
 /**
  * RockMongo english translation
  *
- * @package rockmongo
- * @author iwind.liu <iwind.liu@gmail.com>
- * @version 1.1
  */
 
 $message["TRANSLATION_NAME"] = "English";
@@ -106,7 +103,9 @@ $message["dropwarning2"] = "All data in the database will be lost!";
 $message["createrow"] = "Create Row";
 $message["storagesize"] = "Storage Size";
 $message["datasize"] = "Data Size";
+$message["avg_obj_size"] = "Avg Doc Size";
 $message["indexsize"] = "Index Size";
+$message["index_count"] = "Index Count";
 $message["collections"] = "Collections";
 $message["objects"] = "Objects";
 $message["repairdbmsg"] = "Are you sure to repair database";
@@ -138,6 +137,19 @@ $message["copycollection"] = "Copy Collection";
 $message["to"] = "To";
 $message["removeifexists"] = "Remove target if exists?";
 $message["selectdb"] = "Select Db";
+
+// collection action
+$message["field_menu_update"] = "Update";
+$message["field_menu_query"] = "Query";
+$message["field_menu_sortasc"] = "Sort ASC";
+$message["field_menu_sortdesc"] = "Sort Desc";
+$message["field_menu_rename"] = "Rename";
+$message["field_menu_remove"] = "Remove Field";
+$message["field_menu_clear"] = "Clear";
+$message["field_menu_new"] = "New";
+$message["field_menu_index"] = "Indexs";
+$message["field_menu_hide"] = "Hide";
+$message["field_menu_show"] = "Show";
 
 /** Add user **/
 $message["users"] = "Users";
