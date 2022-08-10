@@ -4,9 +4,9 @@ EasyMongo is a Mongodb web management application. This project is based on [iwi
 [中文版说明](./README_CN.md)
 
 ## Compatibility
-MongoDB: All version above 3.0
+MongoDB: All versions above 3.0
 
-PHP: All version above 5.6
+PHP: All versions above 5.6
 
 ## Installation
 Make sure that the mongodb extension is installed, then execute the following command:

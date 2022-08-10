@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-<title>RockMongo</title>
+<title>EasyMongo</title>
 <?php if (php_sapi_name() === 'cli-server'): ?>
 <base href="/"/>
 <?php endif; ?>

@@ -1,8 +1,7 @@
 <?php
 /**
- * RockMongo Russian translation
+ * EasyMongo Russian translation
  *
- * @package rockmongo
  * @author Станислав Воробьёв <stanislav.vorobyev@gmail.com>
  * @version 1.1
  */
@@ -186,25 +185,25 @@ $message["logout"] = "Выход";
 $message["switch_hosts"] = "Switch Hosts";
 
 /** About **/
-$message["about_content"] = '<strong class="big">RockMongo</strong> --- инструмент администрирования MongoDB, написанный на PHP5.
+$message["about_content"] = '<strong class="big">EasyMongo</strong> --- инструмент администрирования MongoDB, написанный на PHP5.
 
-<p>См. <a href="http://rockmongo.com" target="_blank">http://rockmongo.com</a> подробнее.</p>
+<p>См. <a href="http://easymongo.com" target="_blank">http://easymongo.com</a> подробнее.</p>
 
-<p>Вопросы можно писать Xiangchao Liu: <a href="mailto:iwind.liu@gmail.com">iwind.liu@gmail.com</a> .</p>
+<p>Вопросы можно писать Xiangchao Liu: <a href="mailto:pkuoliver@hotmail.com">pkuoliver@hotmail.com</a> .</p>
 
 <p>Документация:<ul>
-<li><a href="http://rockmongo.com/wiki/changeLog" target="_blank">Журнал изменений</a></li>
-<li><a href="http://rockmongo.com/wiki/configuration" target="_blank">Конфигурация</a></li>
-<li><a href="http://rockmongo.com/wiki/plugin" target="_blank">Плагины</a></li>
-<li><a href="http://rockmongo.com/wiki/faq" target="_blank">FAQ</a></li>
-<li><a href="http://rockmongo.com/donation" target="_blank">Помочь материально<br/><img src="http://www.paypal.com/en_US/i/btn/x-click-but04.gif"/></a></li>
-<li><a href="https://github.com/iwind/rockmongo/issues" target="_blank">Отправить баг</li>
+<li><a href="http://easymongo.com/wiki/changeLog" target="_blank">Журнал изменений</a></li>
+<li><a href="http://easymongo.com/wiki/configuration" target="_blank">Конфигурация</a></li>
+<li><a href="http://easymongo.com/wiki/plugin" target="_blank">Плагины</a></li>
+<li><a href="http://easymongo.com/wiki/faq" target="_blank">FAQ</a></li>
+<li><a href="http://easymongo.com/donation" target="_blank">Помочь материально<br/><img src="http://www.paypal.com/en_US/i/btn/x-click-but04.gif"/></a></li>
+<li><a href="https://github.com/pkuoliver/EasyMongo/issues" target="_blank">Отправить баг</li>
 </ul></p>
 ';
 
 /** Login **/
 $message["loginandrock"] = "Войти и отжечь";
 $message["changeconfig"] = "Можно изменить имя пользователя и пароль в config.php.";
-$message["rockmongocredits"] = "Работает на RockMongo v" . (ROCK_MONGO_VERSION) . ", <a href=\"http://rockmongo.com/downloads\" target=\"_blank\">посмотреть новую версию.</a>";
+$message["rockmongocredits"] = "Работает на EasyMongo v" . (EASY_MONGO_VERSION) . ", <a href=\"http://easymongo.com/downloads\" target=\"_blank\">посмотреть новую версию.</a>";
 
 ?>

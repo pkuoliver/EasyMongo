@@ -1,8 +1,7 @@
 <?php
 /**
- * RockMongo Turkish translation
+ * EasyMongo Turkish translation
  *
- * @package rockmongo
  * @author M. Yılmaz SÜSLÜ <yilmazsuslu@gmail.com>
  * @version 1.1
  */
@@ -186,25 +185,25 @@ $message["logout"] = "Çıkış";
 $message["switch_hosts"] = "Sunucuları Değiştir";
 
 /** About **/
-$message["about_content"] = '<strong class="big">RockMongo</strong> PHP 5 ile kodlanmış bir MongoDB yönetim aracıdır.
+$message["about_content"] = '<strong class="big">EasyMongo</strong> PHP 5 ile kodlanmış bir MongoDB yönetim aracıdır.
 
-<p>Daha fazla bilgi için <a href="http://rockmongo.com" target="_blank">http://rockmongo.com</a> adresine gözatın.</p>
+<p>Daha fazla bilgi için <a href="http://easymongo.com" target="_blank">http://easymongo.com</a> adresine gözatın.</p>
 
-<p>Eğer bir sorunuz olursa, lütfen bana e-posta gönderin: <a href="mailto:iwind.liu@gmail.com">iwind.liu@gmail.com</a> .</p>
+<p>Eğer bir sorunuz olursa, lütfen bana e-posta gönderin: <a href="mailto:pkuoliver@hotmail.com">pkuoliver@hotmail.com</a> .</p>
 
 <p>Belgeler:<ul>
-<li><a href="http://rockmongo.com/wiki/changeLog" target="_blank">Değişiklikler</a></li>
-<li><a href="http://rockmongo.com/wiki/configuration" target="_blank">Konfigürasyon</a></li>
-<li><a href="http://rockmongo.com/wiki/plugin" target="_blank">Eklentiler</a></li>
-<li><a href="http://rockmongo.com/wiki/faq" target="_blank">Sık Sorulan Sorular</a></li>
-<li><a href="http://rockmongo.com/donation" target="_blank">Bağış<br/><img src="http://www.paypal.com/en_US/i/btn/x-click-but04.gif"/></a></li>
-<li><a href="https://github.com/iwind/rockmongo/issues" target="_blank">Problem Bildir</li>
+<li><a href="http://easymongo.com/wiki/changeLog" target="_blank">Değişiklikler</a></li>
+<li><a href="http://easymongo.com/wiki/configuration" target="_blank">Konfigürasyon</a></li>
+<li><a href="http://easymongo.com/wiki/plugin" target="_blank">Eklentiler</a></li>
+<li><a href="http://easymongo.com/wiki/faq" target="_blank">Sık Sorulan Sorular</a></li>
+<li><a href="http://easymongo.com/donation" target="_blank">Bağış<br/><img src="http://www.paypal.com/en_US/i/btn/x-click-but04.gif"/></a></li>
+<li><a href="https://github.com/pkuoliver/EasyMongo/issues" target="_blank">Problem Bildir</li>
 </ul></p>
 ';
 
 /** Login **/
 $message["loginandrock"] = "Login and Rock";
 $message["changeconfig"] = "Kullanıcı adı ve parolanızı config.php dosyasından değiştirebilirsiniz.";
-$message["rockmongocredits"] = "<a href=\"http://rockmongo.com\" target=\"_blank\">RockMongo</a> v" . (ROCK_MONGO_VERSION) . " ile güçlendirilmiştir, <a href=\"http://rockmongo.com/downloads\" target=\"_blank\">yeni sürümü kontrol edin.</a> &nbsp; [<a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=iwind%2eliu%40gmail%2ecom&lc=US&amount=10&item_name=RockMongo%20Project%20Donation&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest\">10 Dolar Bağışla</a>]";
+$message["rockmongocredits"] = "<a href=\"http://easymongo.com\" target=\"_blank\">EasyMongo</a> v" . (EASY_MONGO_VERSION) . " ile güçlendirilmiştir, <a href=\"http://easymongo.com/downloads\" target=\"_blank\">yeni sürümü kontrol edin.</a> &nbsp; [<a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=iwind%2eliu%40gmail%2ecom&lc=US&amount=10&item_name=EasyMongo%20Project%20Donation&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest\">10 Dolar Bağışla</a>]";
 
 ?>

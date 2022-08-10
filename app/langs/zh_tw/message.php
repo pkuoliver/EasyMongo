@@ -1,8 +1,7 @@
 <?php
 /**
- * RockMongo chinese translation
+ * EasyMongo chinese translation
  *
- * @package rockmongo
  * @author iwind.liu <iwind.liu@gmail.com>
  * @version 1.0
  */
@@ -72,10 +71,10 @@ $message["logout"] = "退出";
 
 /** about **/
 $message["loginandrock"] = "登錄";
-$message["about_content"] = '<strong class="big">RockMongo</strong>是可視化的MongoDB管理工具.
+$message["about_content"] = '<strong class="big">EasyMongo</strong>是可視化的MongoDB管理工具.
 
-<p>請訪問 <a href="http://rockmongo.com" target="_blank">http://rockmongo.com</a> 獲取更多信息.</p>
+<p>請訪問 <a href="http://easymongo.com" target="_blank">http://easymongo.com</a> 獲取更多信息.</p>
 
-<p>如果有任何問題和反饋，請發送郵件到：<a href="mailto:iwind.liu@gmail.com">iwind.liu@gmail.com</a> .</p>';
+<p>如果有任何問題和反饋，請發送郵件到：<a href="mailto:pkuoliver@hotmail.com">pkuoliver@hotmail.com</a> .</p>';
 
 ?>

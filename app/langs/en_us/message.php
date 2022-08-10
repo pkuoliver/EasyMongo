@@ -1,6 +1,6 @@
 <?php
 /**
- * RockMongo english translation
+ * EasyMongo english translation
  *
  */
 
@@ -213,25 +213,25 @@ $message["logout"] = "Logout";
 $message["switch_hosts"] = "Switch Hosts";
 
 /** About **/
-$message["about_content"] = '<strong class="big">RockMongo</strong> is a MongoDB administration tool, written in PHP 5.
+$message["about_content"] = '<strong class="big">EasyMongo</strong> is a MongoDB administration tool, written in PHP 5.
 
-<p>See <a href="http://rockmongo.com" target="_blank">http://rockmongo.com</a> for more details.</p>
+<p>See <a href="http://easymongo.com" target="_blank">http://easymongo.com</a> for more details.</p>
 
-<p>If you have any questions, please send email to me: <a href="mailto:iwind.liu@gmail.com">iwind.liu@gmail.com</a> .</p>
+<p>If you have any questions, please send email to me: <a href="mailto:pkuoliver@hotmail.com">pkuoliver@hotmail.com</a> .</p>
 
 <p>Documents:<ul>
-<li><a href="http://rockmongo.com/wiki/changeLog" target="_blank">Changelog</a></li>
-<li><a href="http://rockmongo.com/wiki/configuration" target="_blank">Configuration</a></li>
-<li><a href="http://rockmongo.com/wiki/plugin" target="_blank">Plug-in</a></li>
-<li><a href="http://rockmongo.com/wiki/faq" target="_blank">FAQ</a></li>
-<li><a href="http://rockmongo.com/donation" target="_blank">Donation<br/><img src="http://www.paypal.com/en_US/i/btn/x-click-but04.gif"/></a></li>
-<li><a href="https://github.com/iwind/rockmongo/issues" target="_blank">Report an Issue</li>
+<li><a href="http://easymongo.com/wiki/changeLog" target="_blank">Changelog</a></li>
+<li><a href="http://easymongo.com/wiki/configuration" target="_blank">Configuration</a></li>
+<li><a href="http://easymongo.com/wiki/plugin" target="_blank">Plug-in</a></li>
+<li><a href="http://easymongo.com/wiki/faq" target="_blank">FAQ</a></li>
+<li><a href="http://easymongo.com/donation" target="_blank">Donation<br/><img src="http://www.paypal.com/en_US/i/btn/x-click-but04.gif"/></a></li>
+<li><a href="https://github.com/pkuoliver/EasyMongo/issues" target="_blank">Report an Issue</li>
 </ul></p>
 ';
 
 /** Login **/
 $message["loginandrock"] = "Login and Rock";
 $message["changeconfig"] = "You may change your username and password in config.php.";
-$message["rockmongocredits"] = "Powered by <a href=\"http://rockmongo.com\" target=\"_blank\">RockMongo</a> v" . (ROCK_MONGO_VERSION) . ", <a href=\"http://rockmongo.com/downloads\" target=\"_blank\">check out new version here.</a> &nbsp; [<a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=iwind%2eliu%40gmail%2ecom&lc=US&amount=10&item_name=RockMongo%20Project%20Donation&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest\">Donate 10 dollars</a>]";
+$message["rockmongocredits"] = "Powered by <a href=\"http://easymongo.com\" target=\"_blank\">EasyMongo</a> v" . (EASY_MONGO_VERSION) . ", <a href=\"http://easymongo.com/downloads\" target=\"_blank\">check out new version here.</a> &nbsp; [<a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=iwind%2eliu%40gmail%2ecom&lc=US&amount=10&item_name=EasyMongo%20Project%20Donation&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest\">Donate 10 dollars</a>]";
 
 ?>

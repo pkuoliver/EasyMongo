@@ -1,6 +1,6 @@
 <?php
 /**
- * EasyMongo chinese translation
+ * RockMongo chinese translation
  *
  */
 
@@ -72,8 +72,8 @@ $message["create_collection_full"] = "创建集合";
 $message["create_database"] = "创建数据库";
 $message["save"] = "保存";
 $message["back"] = "返回";
-$message["server_status"] = "服务器状态";
-$message["command_line"] = "命令行";
+$message["server_status"] = "Server Status";
+$message["command_line"] = "Command Line";
 $message["connection"] = "Connection";
 $message["web"] = "Web";
 $message["directives"] = "Directives";
@@ -89,7 +89,7 @@ $message["name"] = "名称";
 $message["newname"] = "新名词";
 $message["oldname"] = "就名称";
 $message["iscapped"] = "Is Capped";
-$message["size"] = "大小";
+$message["size"] = "Size";
 $message["max"] = "Max";
 $message["modifyrow"] = "修改行";
 $message["data"] = "Data";
@@ -101,13 +101,11 @@ $message["dropdatabase"] = "删除数据库";
 $message["dropwarning"] = "警告: 是否要删除该数据库";
 $message["dropwarning2"] = "本数据库中的所有数据都会丢失!";
 $message["createrow"] = "创建行";
-$message["storagesize"] = "存储大小";
-$message["datasize"] = "数据大小";
-$message["avg_obj_size"] = "单文档大小";
-$message["indexsize"] = "索引大小";
-$message["index_count"] = "索引数";
-$message["collections"] = "表个数";
-$message["objects"] = "文档数";
+$message["storagesize"] = "Storage Size";
+$message["datasize"] = "Data Size";
+$message["indexsize"] = "Index Size";
+$message["collections"] = "Collections";
+$message["objects"] = "对象";
 $message["repairdbmsg"] = "确定要修复数据库";
 $message["nocollections"] = "当前没有数据表, 无法转移.";
 $message["nocollections2"] = "还没有数据表";
@@ -137,19 +135,6 @@ $message["copycollection"] = "复制Collection";
 $message["to"] = "To";
 $message["removeifexists"] = "如果存在则删除目标?";
 $message["selectdb"] = "选择数据库";
-
-// collection action
-$message["field_menu_update"] = "更新";
-$message["field_menu_query"] = "查询";
-$message["field_menu_sortasc"] = "升序排序";
-$message["field_menu_sortdesc"] = "降序排序";
-$message["field_menu_rename"] = "重命名";
-$message["field_menu_remove"] = "删除字段";
-$message["field_menu_clear"] = "置空";
-$message["field_menu_new"] = "新建";
-$message["field_menu_index"] = "创建索引";
-$message["field_menu_hide"] = "隐藏";
-$message["field_menu_show"] = "展示";
 
 /** Add user **/
 $message["users"] = "用户";
@@ -213,16 +198,16 @@ $message["logout"] = "退出";
 $message["switch_hosts"] = "切换Hosts";
 
 /** About **/
-$message["about_content"] = '<strong class="big">EasyMongo</strong>是可视化的MongoDB管理工具.
+$message["about_content"] = '<strong class="big">RockMongo</strong>是可视化的MongoDB管理工具.
 
-<p>请访问 <a href="http://easymongo.com" target="_blank">http://easymongo.com</a> 获取更多信息.</p>
+<p>请访问 <a href="http://rockmongo.com" target="_blank">http://rockmongo.com</a> 获取更多信息.</p>
 
-<p>如果有任何问题和反馈，请发送邮件到：<a href="mailto:pkuoliver@hotmail.com">pkuoliver@hotmail.com</a> .</p>';
+<p>如果有任何问题和反馈，请发送邮件到：<a href="mailto:iwind.liu@gmail.com">iwind.liu@gmail.com</a> .</p>';
 
 
 /** Login **/
 $message["loginandrock"] = "登录";
-$message["changeconfig"] = "您可以在config.php中更换用户名和密码.";
-$message["rockmongocredits"] = "Powered by <a href=\"http://easymongo.com\" target=\"_blank\">EasyMongo</a> v" . (EASY_MONGO_VERSION) . ", <a href=\"http://easymongo.com/downloads\" target=\"_blank\">check out new version here.</a> &nbsp; [<a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=iwind%2eliu%40gmail%2ecom&lc=US&amount=10&item_name=EasyMongo%20Project%20Donation&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest\">Donate 10 dollars</a>]";
+$message["changeconfig"] = "你可以在config.php中更换用户名和密码.";
+$message["rockmongocredits"] = "Powered by <a href=\"http://rockmongo.com\" target=\"_blank\">RockMongo</a> v" . (ROCK_MONGO_VERSION) . ", <a href=\"http://rockmongo.com/downloads\" target=\"_blank\">check out new version here.</a> &nbsp; [<a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=iwind%2eliu%40gmail%2ecom&lc=US&amount=10&item_name=RockMongo%20Project%20Donation&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest\">Donate 10 dollars</a>]";
 
 ?>

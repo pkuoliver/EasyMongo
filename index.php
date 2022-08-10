@@ -3,21 +3,21 @@
  * EasyMongo startup
  *
  * In here we define some default settings and start the configuration files
- * @package rockmongo
+ * @package easymongo
  */
 
 /**
 * Defining version number and enabling error reporting
 */
-define("ROCK_MONGO_VERSION", "0.0.1");
+define("EASY_MONGO_VERSION", "0.0.1");
 
 error_reporting(E_ALL);
 
 /**
 * Environment detection
 */
-if (!version_compare(PHP_VERSION, "5.0")) {
-	exit("To make things right, you must install PHP5");
+if (!version_compare(PHP_VERSION, "5.5")) {
+	exit("To make things right, you must install PHP5.6 or newer.");
 }
 if (!class_exists("MongoDB\Driver\Cursor") && !class_exists("MongoDB\Driver\Manager")) {
 	exit("To make things right, you must install php_mongodb module. <a href=\"https://www.php.net/manual/en/mongodb.installation.php\" target=\"_blank\">Here for installation documents on PHP.net.</a>");

@@ -1,8 +1,7 @@
 <?php
 /**
- * RockMongo japanese translation
+ * EasyMongo japanese translation
  *
- * @package rockmongo
  * @author iwind.liu <iwind.liu@gmail.com>
  * @version 1.0
  */
@@ -62,10 +61,10 @@ $message["manuals"] = "マニュアル";
 $message["logout"] = "ログアウト";
 
 /** about **/
-$message["about_content"] = '<strong class="big">RockMongo</strong> is a MongoDB administration tool, written in PHP 5.
+$message["about_content"] = '<strong class="big">EasyMongo</strong> is a MongoDB administration tool, written in PHP 5.
 
-<p>See <a href="http://rockmongo.com" target="_blank">http://rockmongo.com</a> for more details.</p>
+<p>See <a href="http://easymongo.com" target="_blank">http://easymongo.com</a> for more details.</p>
 
-<p>If you have any questions, please send email to me: <a href="mailto:iwind.liu@gmail.com">iwind.liu@gmail.com</a> .</p>';
+<p>If you have any questions, please send email to me: <a href="mailto:pkuoliver@hotmail.com">pkuoliver@hotmail.com</a> .</p>';
 
 ?>

@@ -8,7 +8,7 @@ window.parent.frames["left"].location.reload();
 </script>
 <?php endif; ?>
 
-<p><strong>.js</strong> file exported with RockMongo:</p>
+<p><strong>.js</strong> file exported with EasyMongo:</p>
 
 <form method="post" enctype="multipart/form-data">
 <input type="hidden" name="format" value="js"/>
