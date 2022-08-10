@@ -92,7 +92,7 @@ class DbController extends BaseController {
 				//$colls[] = $name;
 				$cmdRst = $db->command(['collStats' => $name, 'scale'=>1]);
 				$info = $cmdRst->toArray()[0];
-				$statInfo = DbController::formatStatInfo($info);
+				$statInfo = DbController::formatStatInfo($name, $info);
 				$this->colls_stats[] = $statInfo;
 			} catch(Exception $e) {
 
@@ -526,9 +526,9 @@ window.parent.frames["left"].location.reload();
 		$this->display("dropDatabaseResult");
 	}
 
-	private static function formatStatInfo($info) {
+	private static function formatStatInfo($name, $info) {
 		return [
-			'Name'		=> $info['ns'], 
+			'Name'		=> $name, 
 			'Count'		=> $info['count'], 
 			'ObjSize'	=> r_human_bytes(isset($info['avgObjSize'])?$info['avgObjSize']:0), 
 			'Size'		=> r_human_bytes($info['size']), 

@@ -95,6 +95,8 @@ class CollectionController extends BaseController {
 
 	/** show one collection **/
 	public function doIndex() {
+		$microtimeStart = microtime(true);
+
 		$this->db = xn("db");
 		$this->collection = xn("collection");
 
@@ -167,14 +169,18 @@ class CollectionController extends BaseController {
 		try{// if collection is view, will throw exception
 			$indexRet = $db->selectCollection($this->collection)->listIndexes();
 		} catch(Exception $e){}
-		
-		//php library >= 1.4 use countDocuments, else use count
+
+		//php library >= 1.4 use countDocuments, count deprecated since version 1.4.
 		$libVer = RMongo::getLibraryVersion();
-		if(version_compare($libVer, '1.4', '<')) {
+		if(version_compare($libVer, '1.12', '<')) {
 			$this->recordsCount = $db->selectCollection($this->collection)->count();
 		} else {
-			$this->recordsCount = $db->selectCollection($this->collection)->countDocuments();
+			//$this->recordsCount = $db->selectCollection($this->collection)->countDocuments();
+			$this->recordsCount = MCollection::countDocuments($db, $this->collection);
 		}
+
+		// countDocuments is very slow, we had to use count function to estimate.
+		//$this->recordsCount = $db->selectCollection($this->collection)->count();
 		
 		$indexFields = [];
 		foreach ($indexRet as $index => $indexField) {
@@ -373,6 +379,7 @@ class CollectionController extends BaseController {
 		$microtime = microtime(true);
 		$this->rows = $query->findAll(true);
 		$this->cost = (microtime(true) - $microtime)*1000;
+
 		foreach ($this->rows as $index => $row) {
 			$native = $row;
 			$exportor = new VarExportor($query->db(), $native);
@@ -385,6 +392,7 @@ class CollectionController extends BaseController {
 			$row["can_refresh"] = isset($row["_id"]);
 			$this->rows[$index] = $row;
 		}
+		$this->totalCost = (microtime(true) - $microtimeStart)*1000;
 
 		$this->display();
 	}

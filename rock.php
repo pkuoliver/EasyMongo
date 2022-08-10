@@ -630,12 +630,12 @@ function rock_lang($code) {
 }
 
 /**
- * Check RockMongo version
+ * Check EasyMongo version
  *
  */
 function rock_check_version() {
 	global $MONGO;
-	//var_dump($MONGO);
+	
 	if (!isset($MONGO["servers"][0]["host"])) {
 		return;
 	}

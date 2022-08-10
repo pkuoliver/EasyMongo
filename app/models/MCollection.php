@@ -54,9 +54,13 @@ class MCollection {
 		$isCapped = false;
 		$size = 0;
 		$max = 0;
-
+		
 		try{
-			$options = $db->command(array("collStats" => $collection ))->toArray()[0];
+			$it = $db->listCollections(['filter'=>['name'=>$collection]]);
+			$info = iterator_to_array($it);
+			$options = [];
+			if(count($info) > 0) $options = $info[0]->getOptions();
+
 			if (isset($options["capped"])) {
 				$isCapped = $options["capped"];
 			}
@@ -66,11 +70,33 @@ class MCollection {
 			if (isset($options["max"])) {
 				$max = $options["max"];
 			}
+
+			
+		} catch(Exception $e) {
+			//exit("There is something wrong: <font color=\"red\">{$e->getMessage()}</font>, please refresh the page to try again.");
+			//echo "There is something wrong: <font color=\"red\">{$e->getMessage()}</font>, please refresh the page to try again.";
+		}
+		
+		return array( "capped" => $isCapped, "size" => $size, "max" => $max );
+	}
+
+	/**
+	 * get collection documents size
+	 *
+	 * @param MongoDB $db database
+	 * @param string $collection collection name
+	 * @return int document count
+	 */
+	public static function countDocuments(MongoDB\Database $db, $collection) {
+		$count = 0;
+		try{
+			$stat = $db->command(array("collStats" => $collection ))->toArray()[0];
+			if(isset($stat['count'])) $count = $stat['count'];
 		} catch(Exception $e) {
 			//exit("There is something wrong: <font color=\"red\">{$e->getMessage()}</font>, please refresh the page to try again.");
 		}
 		
-		return array( "capped" => $isCapped, "size" => $size, "max" => $max );
+		return $count;
 	}
 
 	/**

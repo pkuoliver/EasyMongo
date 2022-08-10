@@ -65,15 +65,15 @@ $(function () {
 		<th><?php hm("index_count"); ?></th>
 		<th><?php hm("objects"); ?></th>
 	</tr>
-	<?php foreach ($colls_stats as $db):?>
+	<?php foreach ($colls_stats as $coll):?>
 	<tr bgcolor="#fffeee">
-		<td width="120" valign="top"><a href="<?php h(url("db.index", array("db"=>$db["Name"]))); ?>"><?php h($db["Name"]);?></a></td>
-		<td width="80" style="text-align:right;"><?php h($db["Size"]);?></td>
-		<td width="80" style="text-align:right;"><?php h($db["DiskSize"]);?></td>
-		<td width="80" style="text-align:right;"><?php h($db["ObjSize"]);?></td>
-		<td width="80" style="text-align:right;"><?php h($db["IdxSize"]);?></td>
-		<td width="80" style="text-align:right;"><?php h($db["IdxCount"]);?></td>
-		<td width="80" style="text-align:right;"><?php h($db["Count"]);?></td>
+		<td width="120" valign="top"><a href="<?php h(url("collection.index", array('db'=>$db, "collection"=>$coll["Name"]))); ?>"><?php h($coll["Name"]);?></a></td>
+		<td width="80" style="text-align:right;"><?php h($coll["Size"]);?></td>
+		<td width="80" style="text-align:right;"><?php h($coll["DiskSize"]);?></td>
+		<td width="80" style="text-align:right;"><?php h($coll["ObjSize"]);?></td>
+		<td width="80" style="text-align:right;"><?php h($coll["IdxSize"]);?></td>
+		<td width="80" style="text-align:right;"><?php h($coll["IdxCount"]);?></td>
+		<td width="80" style="text-align:right;"><?php h($coll["Count"]);?></td>
 	</tr>
 	<?php endforeach; ?>
 </table>
