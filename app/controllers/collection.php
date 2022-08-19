@@ -119,6 +119,8 @@ class CollectionController extends BaseController {
 					}
 					fwrite($fp, date("Y-m-d H:i:s") . "\n" . var_export($params, true) . "\n================\n");
 					fclose($fp);
+				} else {
+					echo "Log Directory Permission Denied.\n";
 				}
 			}
 		}

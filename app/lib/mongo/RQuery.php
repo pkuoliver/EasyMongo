@@ -351,8 +351,8 @@ class RQuery {
 		return $this;
 	}
 
-		/**
-	 * 取得当前查询的游标
+	/**
+	 * 取得当前查询参数
 	 *
 	 * @return array
 	 */
@@ -375,7 +375,6 @@ class RQuery {
 			}
 			$option['hint'] = $hints;
 		}
-		
 		return $option;
 	}
 
