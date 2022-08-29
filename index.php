@@ -9,7 +9,7 @@
 /**
 * Defining version number and enabling error reporting
 */
-define("EASY_MONGO_VERSION", "0.0.1");
+define("EASY_MONGO_VERSION", "1.0.0");
 
 error_reporting(E_ALL);
 
