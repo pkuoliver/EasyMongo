@@ -234,6 +234,7 @@ $message["about_content"] = '<strong class="big">EasyMongo</strong>是可視化�
 /** Login **/
 $message["loginandrock"] = "登錄";
 $message["changeconfig"] = "您可以在config.php中更換用戶名和密碼。";
-$message["rockmongocredits"] = "Powered by <a href=\"http://easymongo.com\" target=\"_blank\">EasyMongo</a> v" . (EASY_MONGO_VERSION) . ", <a href=\"http://easymongo.com/downloads\" target=\"_blank\">check out new version here.</a> &nbsp; [<a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=iwind%2eliu%40gmail%2ecom&lc=US&amount=10&item_name=EasyMongo%20Project%20Donation&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest\">Donate 10 dollars</a>]";
+$message["rockmongocredits"] = "<a href=\"http://easymongo.com\" target=\"_blank\">EasyMongo</a> v" . (EASY_MONGO_VERSION) . ", <a href=\"http://easymongo.com/downloads\" target=\"_blank\">
+點擊這裡檢查新版本.</a> &nbsp; <br>[<a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=iwind%2eliu%40gmail%2ecom&lc=US&amount=10&item_name=EasyMongo%20Project%20Donation&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest\">捐贈我們</a>]";
 
 ?>

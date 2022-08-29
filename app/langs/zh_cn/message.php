@@ -30,7 +30,7 @@ $message["databases"] = "数据库";
 $message["processlist"] = "进程";
 $message["command"] = "命令";
 $message["execute"] = "代码执行";
-$message["startup_log"] = "Startup Logs";
+$message["startup_log"] = "启动日志";
 $message["members"] = "Members";
 $message["master"] = "Master";
 $message["masters"] = "Masters";
@@ -74,7 +74,7 @@ $message["save"] = "保存";
 $message["back"] = "返回";
 $message["server_status"] = "服务器状态";
 $message["command_line"] = "命令行";
-$message["connection"] = "Connection";
+$message["connection"] = "连接信息";
 $message["web"] = "Web";
 $message["directives"] = "Directives";
 $message["directive"] = "Directive";
@@ -232,6 +232,6 @@ $message["about_content"] = '<strong class="big">EasyMongo</strong>是一款非�
 /** Login **/
 $message["loginandrock"] = "登录";
 $message["changeconfig"] = "您可以在config.php中更换用户名和密码.";
-$message["rockmongocredits"] = "Powered by <a href=\"http://easymongo.com\" target=\"_blank\">EasyMongo</a> v" . (EASY_MONGO_VERSION) . ", <a href=\"http://easymongo.com/downloads\" target=\"_blank\">check out new version here.</a> &nbsp; [<a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=iwind%2eliu%40gmail%2ecom&lc=US&amount=10&item_name=EasyMongo%20Project%20Donation&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest\">Donate 10 dollars</a>]";
+$message["rockmongocredits"] = "<a href=\"http://easymongo.com\" target=\"_blank\">EasyMongo</a> v" . (EASY_MONGO_VERSION) . ", <a href=\"http://easymongo.com/downloads\" target=\"_blank\">点击这里检查新版本.</a> &nbsp; <br>[<a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=iwind%2eliu%40gmail%2ecom&lc=US&amount=10&item_name=EasyMongo%20Project%20Donation&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest\">捐赠我们</a>]";
 
 ?>

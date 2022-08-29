@@ -215,7 +215,7 @@ $message["logout"] = "Выход";
 $message["switch_hosts"] = "Switch Hosts";
 
 /** About **/
-$message["about_content"] = '<strong class="big">EasyMongo</strong> --- инструмент администрирования MongoDB, написанный на PHP5.
+$message["about_content"] = '<strong class="big">EasyMongo</strong> --- инструмент администрирования MongoDB, написанный на PHP.
 
 <p>См. <a href="http://easymongo.com" target="_blank">http://easymongo.com</a> подробнее.</p>
 
