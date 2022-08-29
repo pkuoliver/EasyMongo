@@ -8,7 +8,7 @@
 
 $message["TRANSLATION_NAME"] = "Italiano - Italian";
 $message["TRANSLATION_ID"] = 10;
- 
+
 /** Login interface **/
 $message["admin"] = "Admin";
 $message["password"] = "Password";
@@ -24,6 +24,7 @@ $message["can_not_connect"] = "Eccezione connessione MongoDB: %s. Verifica la tu
 $message["can_not_auth"] = "Autenticazione MongoDB fallita. Verifica la correttezza di username e password dal tuo amministratore mongo.";
 
 /** Buttons and titles **/
+$message["default"] = "Default";
 $message["overview"] = "Panoramica";
 $message["server"] = "Server";
 $message["status"] = "Stato";
@@ -31,6 +32,8 @@ $message["databases"] = "Databases";
 $message["processlist"] = "Lista dei processi";
 $message["command"] = "Comando";
 $message["execute"] = "Esegui";
+$message["startup_log"] = "Startup Logs";
+$message["members"] = "Members";
 $message["master"] = "Master";
 $message["masters"] = "Masters";
 $message["slave"] = "Slave";
@@ -47,12 +50,15 @@ $message["argument"] = "Argomento";
 $message["update"] = "Aggiorna";
 $message["duplicate"] = "Duplica";
 $message["text"] = "Testo";
+$message["expand"] = "Expand";
+$message["collapse"] = "Collapse";
 $message["yes"] = "Si";
 $message["no"] = "No";
 $message["statistics"] = "Statistiche";
 $message["export"] = "Esporta";
 $message["import"] = "Importa";
 $message["transfer"] = "Trasferisci";
+$message["sock"] = "Socket";
 $message["drop"] = "Elimina";
 $message["more"] = "Altro";
 $message["rename"] = "Rinomina";
@@ -99,7 +105,9 @@ $message["dropwarning2"] = "Tutti i dati del database saranno persi!";
 $message["createrow"] = "Crea Riga";
 $message["storagesize"] = "Dimensione su disco";
 $message["datasize"] = "Dimensione Dati";
+$message["avg_obj_size"] = "Avg Doc Size";
 $message["indexsize"] = "Dimensione Indice";
+$message["index_count"] = "Index Count";
 $message["collections"] = "Collections";
 $message["objects"] = "Objects";
 $message["repairdbmsg"] = "Sei sicuro di voler riparare il database";
@@ -115,22 +123,35 @@ $message["port"] = "Porta";
 $message["copyindexes"] = "Copia Indici?";
 $message["confirm"] = "Conferma";
 $message["fields"] = "Campi";
+$message["other_fields"] = "Other Fields";
 $message["unique"] = "Unico";
 $message["key"] = "Chiave";
 $message["operation"] = "Operazione";
 $message["removeduplicates"] = "Rimuovi duplicati?";
+$message["duplicateskeyinfo"] = "If there has duplicates key, create index will fialed.";
 $message["listdbcommands"] = "Lista di comandi del database";
 $message["format"] = "Formato";
 $message["execute_command"] = "Esegui Comando";
 $message["validate"] = "Convalida";
 $message["dropifexists"] = "Elimina se esiste?";
 $message["warningprops"] = "<strong>Osservazione</strong>: Per cambiare le opzioni della collection, verrà creata una nuova collection, copiando tutti i dati dalla precedente, ed eliminando la collection precedente. Per far ciò occorrerà un lungo tempo per completare l'operazione se si è in presenza di una collection di grandi dimensioni.";
-$message["warningindex"] = "Sei sicuro di eliminare l'indice";
-$message["createindex"] = "Crea nuovo Indice";
 $message["copycollection"] = "Copia Collection";
 $message["to"] = "A";
 $message["removeifexists"] = "Rimuovi target se esiste?";
 $message["selectdb"] = "Seleziona Db";
+
+// collection action
+$message["field_menu_update"] = "Update";
+$message["field_menu_query"] = "Query";
+$message["field_menu_sortasc"] = "Sort ASC";
+$message["field_menu_sortdesc"] = "Sort Desc";
+$message["field_menu_rename"] = "Rename";
+$message["field_menu_remove"] = "Remove Field";
+$message["field_menu_clear"] = "Clear";
+$message["field_menu_new"] = "New";
+$message["field_menu_index"] = "Indexs";
+$message["field_menu_hide"] = "Hide";
+$message["field_menu_show"] = "Show";
 
 /** Add user **/
 $message["users"] = "Utenti";
@@ -139,7 +160,7 @@ $message["username"] = "UserName";
 $message["confirm_pass"] = "Conferma Password";
 $message["readonly"] = "Sola lettura?";
 $message["addreplace"] = "Aggiungi o Sostituisci";
-	
+
 /** Manual links **/
 $message["querying"] = "Querying";
 $message["updating"] = "Updating";
@@ -148,10 +169,10 @@ $message["jsapi"] = "JS API";
 $message["phpmongo"] = "PHP Mongo";
 
 /** Replication **/
-$message["repstatus"] = "Stato di Replicazione";
+$message["repstatus"] = "Ripara Database";
 $message["me"] = "me";
 
-$message["repstatus"] = "Ripara Database";
+$message["repair_database"] = "Repair Database";
 $message["response_from_server"] = "Risposta dal Server";
 
 $message["dropped_from_database"] = "è eliminato dal database";
@@ -167,7 +188,7 @@ $message["profiling_level1"] = "0 - off";
 $message["profiling_level2"] = "1 - log operationi lente (>N ms)";
 $message["profiling_level3"] = "2 - log tutte le operationi";
 $message["timecost"] = "Tempo impiegato";
-	
+
 /** Collection operations **/
 $message["submit_query"] = "Invia Query";
 $message["explain"] = "Estendi";
@@ -177,6 +198,15 @@ $message["action"] = "Azione";
 $message["limit"] = "Limite";
 $message["new_field"] = "Nuovo Campo";
 
+/** Index Creation **/
+$message["warningindex"] = "Sei sicuro di eliminare l'indice";
+$message["createindex"] = "Crea nuovo Indice";
+$message["create_2d_index"] = "Create 2D Index";
+$message["2d_index_location_field"] = "Location Field";
+$message["2d_index_min_bound"] = "Min Bound";
+$message["2d_index_max_bound"] = "Max Bound";
+$message["2d_index_bit_precision"] = "Bit Precision";
+
 /** Top bar **/
 $message["tools"] = "Strumenti";
 $message["manuals"] = "Manuali";
@@ -185,7 +215,7 @@ $message["logout"] = "Logout";
 $message["switch_hosts"] = "Cambia Hosts";
 
 /** About **/
-$message["about_content"] = '<strong class="big">EasyMongo</strong> è uno strumento per amministrare MongoDB, scritto in PHP 5.
+$message["about_content"] = '<strong class="big">EasyMongo</strong> è uno strumento per amministrare MongoDB, scritto in PHP.
 
 <p>Visita <a href="http://easymongo.com/" target="_blank">http://easymongo.com/</a> per maggiori dettagli.</p>
 

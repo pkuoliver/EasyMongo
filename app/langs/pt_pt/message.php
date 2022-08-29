@@ -5,33 +5,60 @@
  * @author Luis Romao <zecompadre@gmail.com>
  * @version 1.1
  */
- 
+
 $message["TRANSLATION_NAME"] = "Portugu&ecirc;s - Portugal";
 $message["TRANSLATION_ID"] = 11;
 
+/** Login interface **/
+$message["admin"] = "Admin";
+$message["password"] = "Password";
+$message["language"] = "Language";
+$message["hour"] = "Hour";
+$message["hours"] = "Hours";
+$message["month"] = "Month";
+$message["alive"] = "Alive";
+$message["authenticate"] = "Authenticate";
+
 /** Conexão **/
 $message["can_not_connect"] = "Impossível conectar com o MongoDB: %s. Verifique a configuração";
+$message["can_not_auth"] = "MongoDB authenticate failed. Please check your username and password from your mongo administrator.";
 
 /** Botões e Títulos **/
+$message["default"] = "Default";
+$message["overview"] = "Overview";
 $message["server"] = "Servidor";
 $message["status"] = "Estado";
 $message["databases"] = "Base de Dados";
 $message["processlist"] = "Processos";
 $message["command"] = "Comando";
 $message["execute"] = "Executar";
+$message["startup_log"] = "Startup Logs";
+$message["members"] = "Members";
+$message["master"] = "Master";
+$message["masters"] = "Masters";
+$message["slave"] = "Slave";
+$message["slaves"] = "Slaves";
 $message["master_slave"] = "Master/Slave";
 $message["query"] = "Query";
 $message["refresh"] = "Atualizar";
 $message["insert"] = "Inserir";
+$message["add"] = "Add";
 $message["clear"] = "Limpar";
 $message["delete"] = "Apagar";
+$message["remove"] = "Remove";
+$message["argument"] = "Argument";
 $message["update"] = "Atualizar";
 $message["duplicate"] = "Duplicar";
 $message["text"] = "Texto";
+$message["expand"] = "Expand";
+$message["collapse"] = "Collapse";
+$message["yes"] = "Yes";
+$message["no"] = "No";
 $message["statistics"] = "Estatísticas";
 $message["export"] = "Exportar";
 $message["import"] = "Importar";
 $message["transfer"] = "Transferir";
+$message["sock"] = "Socket";
 $message["drop"] = "Apagar";
 $message["more"] = "Mais";
 $message["rename"] = "Renomear";
@@ -39,6 +66,7 @@ $message["indexes"] = "Índices";
 $message["properties"] = "Propriedades";
 $message["validate"] = "Validar";
 $message["repair"] = "Reparar";
+$message["all"] = "All";
 $message["authentication"] = "Autenticação";
 $message["profile"] = "Perfil";
 $message["create_collection"] = "Nova Coleção";
@@ -46,6 +74,120 @@ $message["create_collection_full"] = "Criar nova Coleção";
 $message["create_database"] = "Criar nova Base de Dados";
 $message["save"] = "Salvar";
 $message["back"] = "Voltar";
+$message["server_status"] = "Server Status";
+$message["command_line"] = "Command Line";
+$message["connection"] = "Connection";
+$message["web"] = "Web";
+$message["directives"] = "Directives";
+$message["directive"] = "Directive";
+$message["global_value"] = "Global Value";
+$message["local_value"] = "Local Value";
+$message["build_info"] = "Build Information";
+$message["kill"] = "Kill";
+$message["killop"] = "Are you sure to kill the op";
+$message["killoperation"] = "Kill Operation";
+$message["create"] = "Create";
+$message["name"] = "Name";
+$message["newname"] = "New Name";
+$message["oldname"] = "Old Name";
+$message["iscapped"] = "Is Capped";
+$message["size"] = "Size";
+$message["max"] = "Max";
+$message["modifyrow"] = "Modify Row";
+$message["data"] = "Data";
+$message["validarray"] = "Data must be a valid PHP array, just like:";
+$message["responseserver"] = "Response from server:";
+$message["db"] = "DB";
+$message["gotodbs"] = "Go to databases";
+$message["dropdatabase"] = "Drop Database";
+$message["dropwarning"] = "Warning: are you sure you want to drop the database";
+$message["dropwarning2"] = "All data in the database will be lost!";
+$message["createrow"] = "Create Row";
+$message["storagesize"] = "Storage Size";
+$message["datasize"] = "Data Size";
+$message["avg_obj_size"] = "Avg Doc Size";
+$message["indexsize"] = "Index Size";
+$message["index_count"] = "Index Count";
+$message["collections"] = "Collections";
+$message["objects"] = "Objects";
+$message["repairdbmsg"] = "Are you sure to repair database";
+$message["nocollections"] = "There is no collections here, you can not transfer.";
+$message["nocollections2"] = "No collections yet";
+$message["download"] = "Download?";
+$message["compressed"] = "Compressed";
+$message["rowsexported"] = "rows exported";
+$message["createnewcollection"] = "Create new collection in db";
+$message["target"] = "Target";
+$message["host"] = "Host";
+$message["port"] = "Port";
+$message["copyindexes"] = "Copy Indexes?";
+$message["confirm"] = "Confirm";
+$message["fields"] = "Fields";
+$message["other_fields"] = "Other Fields";
+$message["unique"] = "Unique";
+$message["key"] = "Key";
+$message["operation"] = "Operation";
+$message["removeduplicates"] = "Duplicates key";
+$message["duplicateskeyinfo"] = "If there has duplicates key, create index will fialed.";
+$message["listdbcommands"] = "List of database commands";
+$message["format"] = "Format";
+$message["execute_command"] = "Execute Command";
+$message["validate"] = "Validar";
+$message["dropifexists"] = "Drop if exists?";
+$message["warningprops"] = "<strong>Notice</strong>: To change collection options, we will create a new collection, copy all data from old one, then drop old one. This will spend a long time to complete when you have a large collection.";
+$message["copycollection"] = "Copy Collection";
+$message["to"] = "To";
+$message["removeifexists"] = "Remove target if exists?";
+$message["selectdb"] = "Select Db";
+
+// collection action
+$message["field_menu_update"] = "Update";
+$message["field_menu_query"] = "Query";
+$message["field_menu_sortasc"] = "Sort ASC";
+$message["field_menu_sortdesc"] = "Sort Desc";
+$message["field_menu_rename"] = "Rename";
+$message["field_menu_remove"] = "Remove Field";
+$message["field_menu_clear"] = "Clear";
+$message["field_menu_new"] = "New";
+$message["field_menu_index"] = "Indexs";
+$message["field_menu_hide"] = "Hide";
+$message["field_menu_show"] = "Show";
+
+/** Add user **/
+$message["users"] = "Users";
+$message["adduser"] = "Add User";
+$message["username"] = "UserName";
+$message["confirm_pass"] = "Confirm Password";
+$message["readonly"] = "Read Only?";
+$message["addreplace"] = "Add or Replace";
+
+/** Manual links **/
+$message["querying"] = "Querying";
+$message["updating"] = "Updating";
+$message["commands"] = "Commands";
+$message["jsapi"] = "JS API";
+$message["phpmongo"] = "PHP Mongo";
+
+/** Replication **/
+$message["repstatus"] = "Replication Status";
+$message["me"] = "Me";
+
+$message["repair_database"] = "Repair Database";
+$message["response_from_server"] = "Response from Server";
+
+$message["dropped_from_database"] = "is dropped from database";
+
+$message["noqueryhistory"] = "No query history yet.";
+$message["requery"] = "Re-query";
+
+$message["date"] = "Date";
+$message["change_level"] = "Change level";
+$message["clear_profile"] = "Are you sure to clear profile on db";
+$message["choose_profiling_level"] = "Choose current profiling level";
+$message["profiling_level1"] = "0 - off";
+$message["profiling_level2"] = "1 - log slow operations (>N ms)";
+$message["profiling_level3"] = "2 - log all operations";
+$message["timecost"] = "Time cost";
 
 /** Operações de Coleções **/
 $message["submit_query"] = "Enviar Query";
@@ -54,17 +196,44 @@ $message["clear_conditions"] = "Limpar Condições";
 $message["rows_per_page"] = "Linhas por Página";
 $message["action"] = "Ação";
 $message["limit"] = "Limite";
+$message["new_field"] = "New Field";
+
+/** Index Creation **/
+$message["warningindex"] = "Are you sure to drop the index";
+$message["createindex"] = "Create normal Index";
+$message["create_2d_index"] = "Create 2D Index";
+$message["2d_index_location_field"] = "Location Field";
+$message["2d_index_min_bound"] = "Min Bound";
+$message["2d_index_max_bound"] = "Max Bound";
+$message["2d_index_bit_precision"] = "Bit Precision";
 
 /** Barra do Topo **/
 $message["tools"] = "Ferramentas";
 $message["manuals"] = "Manuais";
 $message["logout"] = "Sair";
 
+$message["switch_hosts"] = "Switch Hosts";
+
 /** Sobre **/
 $message["about_content"] = '<strong class="big">EasyMongo</strong> é uma ferramenta de administração para o MongoDB, escrito em PHP 5.
 
 <p>Visite <a href="http://easymongo.com" target="_blank">http://easymongo.com</a> para mais detalhes.</p>
 
-<p>Se têm alguma dúvida, envie um email para: <a href="mailto:pkuoliver@hotmail.com">pkuoliver@hotmail.com</a> .</p>';
+<p>Se têm alguma dúvida, envie um email para: <a href="mailto:pkuoliver@hotmail.com">pkuoliver@hotmail.com</a> .</p>;
+
+<p>Documents:<ul>
+<li><a href="http://easymongo.com/wiki/changeLog" target="_blank">Changelog</a></li>
+<li><a href="http://easymongo.com/wiki/configuration" target="_blank">Configuration</a></li>
+<li><a href="http://easymongo.com/wiki/plugin" target="_blank">Plug-in</a></li>
+<li><a href="http://easymongo.com/wiki/faq" target="_blank">FAQ</a></li>
+<li><a href="http://easymongo.com/donation" target="_blank">Donation<br/><img src="http://www.paypal.com/en_US/i/btn/x-click-but04.gif"/></a></li>
+<li><a href="https://github.com/pkuoliver/EasyMongo/issues" target="_blank">Report an Issue</li>
+</ul></p>
+';
+
+/** Login **/
+$message["loginandrock"] = "Login and Rock";
+$message["changeconfig"] = "You may change your username and password in config.php.";
+$message["rockmongocredits"] = "Powered by <a href=\"http://easymongo.com\" target=\"_blank\">EasyMongo</a> v" . (EASY_MONGO_VERSION) . ", <a href=\"http://easymongo.com/downloads\" target=\"_blank\">check out new version here.</a> &nbsp; [<a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=iwind%2eliu%40gmail%2ecom&lc=US&amount=10&item_name=EasyMongo%20Project%20Donation&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest\">Donate 10 dollars</a>]";
 
 ?>

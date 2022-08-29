@@ -1,5 +1,5 @@
 # EasyMongo
-Mongodb Web管理应用，本项目基于[RockMongo](https://github.com/iwind/rockmongo)，使用最新的[mongodb扩展](https://pecl.php.net/package/mongodb) + [mongo-php-library](https://github.com/mongodb/mongo-php-library)模式，支持Mongodb3.0+，以及php5.6以上所有版本。
+MongoDB Web管理应用，本项目基于[RockMongo](https://github.com/iwind/rockmongo)，使用最新的[mongodb扩展](https://pecl.php.net/package/mongodb) + [mongo-php-library](https://github.com/mongodb/mongo-php-library)模式，支持Mongodb3.0+，以及php5.6以上所有版本。
 
 
 ## 广泛的版本支持
@@ -9,8 +9,8 @@ PHP: php5.6, php7.x, php8.x
 
 
 ## 丰富的功能
-* 基础的增删改查操作
-* 索引操作
+* 便捷的增删改查操作
+* 索引增删查操作
 * 数据库/复制集状态监控
 * 数据导入导出
 * 查询性能优化

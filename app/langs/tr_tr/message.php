@@ -8,7 +8,7 @@
 
 $message["TRANSLATION_NAME"] = "Türkçe - Turkish";
 $message["TRANSLATION_ID"] = 12;
- 
+
 /** Login interface **/
 $message["admin"] = "Yönetici";
 $message["password"] = "Parola";
@@ -24,6 +24,7 @@ $message["can_not_connect"] = "MongoDB bağlantı problemi: %s. Lütfen konfigü
 $message["can_not_auth"] = "MongoDB yetkilendirme başarısız. Veritabanı yöneticinizde kullanıcı adı ve parolanızı kontrol edin.";
 
 /** Buttons and titles **/
+$message["default"] = "Default";
 $message["overview"] = "Genel Bakış";
 $message["server"] = "Sunucu";
 $message["status"] = "Durum";
@@ -31,6 +32,8 @@ $message["databases"] = "Veritabanları";
 $message["processlist"] = "İşlemler Listesi";
 $message["command"] = "Komut";
 $message["execute"] = "Çalıştır";
+$message["startup_log"] = "Startup Logs";
+$message["members"] = "Members";
 $message["master"] = "Master";
 $message["masters"] = "Master'lar";
 $message["slave"] = "Slave";
@@ -47,12 +50,15 @@ $message["argument"] = "Parametre";
 $message["update"] = "Güncelle";
 $message["duplicate"] = "Kopyala";
 $message["text"] = "Metin";
+$message["expand"] = "Expand";
+$message["collapse"] = "Collapse";
 $message["yes"] = "Evet";
 $message["no"] = "Hayır";
 $message["statistics"] = "İstatistikler";
 $message["export"] = "Dışa Aktar";
 $message["import"] = "İçe Aktar";
 $message["transfer"] = "Transfer";
+$message["sock"] = "Socket";
 $message["drop"] = "Kaldır";
 $message["more"] = "Daha";
 $message["rename"] = "Yeniden adlandır";
@@ -99,7 +105,9 @@ $message["dropwarning2"] = "Veritabanındaki tüm veriler silinecek!";
 $message["createrow"] = "Yeni satır ekle";
 $message["storagesize"] = "Depolama Boyutu";
 $message["datasize"] = "Data Boyutu";
+$message["avg_obj_size"] = "Avg Doc Size";
 $message["indexsize"] = "Indeks Boyutu";
+$message["index_count"] = "Index Count";
 $message["collections"] = "Kolleksiyonlar";
 $message["objects"] = "Objeler";
 $message["repairdbmsg"] = "Veritabanını onarmak istediğinize emin misiniz";
@@ -115,22 +123,35 @@ $message["port"] = "Port";
 $message["copyindexes"] = "Indeksler kopyalansın mı?";
 $message["confirm"] = "Onayla";
 $message["fields"] = "Alanlar";
+$message["other_fields"] = "Other Fields";
 $message["unique"] = "Eşsiz";
 $message["key"] = "Anahtar";
 $message["operation"] = "Operasyon";
 $message["removeduplicates"] = "Duplicate olanlar silinsin mi?";
+$message["duplicateskeyinfo"] = "If there has duplicates key, create index will fialed.";
 $message["listdbcommands"] = "Veritabanı komutları listesi";
 $message["format"] = "Biçim";
 $message["execute_command"] = "Komutu Çalıştır";
 $message["validate"] = "Doğrula";
 $message["dropifexists"] = "Varsa eskisi silinsin mi?";
 $message["warningprops"] = "<strong>Uyarı</strong>: Kolleksiyon ayarlarını değiştirmek için yeni bir kolleksiyon yaratır, tüm veriyi eski kolleksiyondan kopyalarız ve eski kolleksiyonu sileriz. Kolleksiyonun boyutu büyüdükçe bu işlemin tamamalanma süresi uzayacaktır.";
-$message["warningindex"] = "Indeksi düşürmek istediğinizden emin misiniz";
-$message["createindex"] = "Yeni Indeks Yarat";
 $message["copycollection"] = "Kolleksiyonu kopyala";
 $message["to"] = "Şuraya";
 $message["removeifexists"] = "Varsa eskisi silinsin mi?";
 $message["selectdb"] = "Veritabanı seç";
+
+// collection action
+$message["field_menu_update"] = "Update";
+$message["field_menu_query"] = "Query";
+$message["field_menu_sortasc"] = "Sort ASC";
+$message["field_menu_sortdesc"] = "Sort Desc";
+$message["field_menu_rename"] = "Rename";
+$message["field_menu_remove"] = "Remove Field";
+$message["field_menu_clear"] = "Clear";
+$message["field_menu_new"] = "New";
+$message["field_menu_index"] = "Indexs";
+$message["field_menu_hide"] = "Hide";
+$message["field_menu_show"] = "Show";
 
 /** Add user **/
 $message["users"] = "Kullanıcılar";
@@ -139,7 +160,7 @@ $message["username"] = "Kullanıcıadı";
 $message["confirm_pass"] = "Parolayı doğrulayın";
 $message["readonly"] = "Salt okunur?";
 $message["addreplace"] = "Ekle veya Değiştir";
-	
+
 /** Manual links **/
 $message["querying"] = "Sorgulanıyor";
 $message["updating"] = "Güncelleniyor";
@@ -167,7 +188,7 @@ $message["profiling_level1"] = "0 - kapalı";
 $message["profiling_level2"] = "1 - yavaş operasyonları logla (>N ms)";
 $message["profiling_level3"] = "2 - tüm opearsyonları logla";
 $message["timecost"] = "Harcanan zaman";
-	
+
 /** Collection operations **/
 $message["submit_query"] = "Sorguyu Gönder";
 $message["explain"] = "Sorguyu Açıkla";
@@ -176,6 +197,15 @@ $message["rows_per_page"] = "Sayfa başına kayıt";
 $message["action"] = "Olay";
 $message["limit"] = "Limit";
 $message["new_field"] = "Yeni Alan";
+
+/** Index Creation **/
+$message["warningindex"] = "Indeksi düşürmek istediğinizden emin misiniz";
+$message["createindex"] = "Yeni Indeks Yarat";
+$message["create_2d_index"] = "Create 2D Index";
+$message["2d_index_location_field"] = "Location Field";
+$message["2d_index_min_bound"] = "Min Bound";
+$message["2d_index_max_bound"] = "Max Bound";
+$message["2d_index_bit_precision"] = "Bit Precision";
 
 /** Top bar **/
 $message["tools"] = "Araçlar";

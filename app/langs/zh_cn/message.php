@@ -86,8 +86,8 @@ $message["killop"] = "是否要杀掉当前op";
 $message["killoperation"] = "结束操作";
 $message["create"] = "创建";
 $message["name"] = "名称";
-$message["newname"] = "新名词";
-$message["oldname"] = "就名称";
+$message["newname"] = "新名称";
+$message["oldname"] = "旧名称";
 $message["iscapped"] = "Is Capped";
 $message["size"] = "大小";
 $message["max"] = "Max";
@@ -213,12 +213,21 @@ $message["logout"] = "退出";
 $message["switch_hosts"] = "切换Hosts";
 
 /** About **/
-$message["about_content"] = '<strong class="big">EasyMongo</strong>是可视化的MongoDB管理工具.
+$message["about_content"] = '<strong class="big">EasyMongo</strong>是一款非常好用的可视化的MongoDB管理工具。支持Mongodb3.0+，以及php5.6以上所有版本。
 
 <p>请访问 <a href="http://easymongo.com" target="_blank">http://easymongo.com</a> 获取更多信息.</p>
 
-<p>如果有任何问题和反馈，请发送邮件到：<a href="mailto:pkuoliver@hotmail.com">pkuoliver@hotmail.com</a> .</p>';
+<p>如果有任何问题和反馈，请发送邮件到：<a href="mailto:pkuoliver@hotmail.com">pkuoliver@hotmail.com</a> .</p>
 
+<p>相关文档:<ul>
+<li><a href="http://easymongo.com/wiki/changeLog" target="_blank">更新日志</a></li>
+<li><a href="http://easymongo.com/wiki/configuration" target="_blank">配置</a></li>
+<li><a href="http://easymongo.com/wiki/plugin" target="_blank">插件</a></li>
+<li><a href="http://easymongo.com/wiki/faq" target="_blank">FAQ</a></li>
+<li><a href="http://easymongo.com/donation" target="_blank">捐赠<br/><img src="http://www.paypal.com/en_US/i/btn/x-click-but04.gif"/></a></li>
+<li><a href="https://github.com/pkuoliver/EasyMongo/issues" target="_blank">报告问题</li>
+</ul></p>
+';
 
 /** Login **/
 $message["loginandrock"] = "登录";
