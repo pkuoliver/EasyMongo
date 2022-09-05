@@ -84,8 +84,10 @@ currentFields.push("<?php h(addslashes($field));?>");
 			<input type="button" value="<?php hm("explain"); ?>" onclick="explainQuery(this.form)" />
 			<input type="button" value="<?php hm("clear_conditions"); ?>" onclick="window.location='<?php h(url("collection.index", array( "db"=>$db, "collection" => $collection, "format" => xn("format") ))); ?>'"/>
 			[<a href="http://easymongo.com/wiki/queryExamples?lang=en_us" target="_blank">Query Examples</a>]
-			<?php if(isset($cost)):?>Cost <?php h(round($cost, 2)); h('ms / '.round($totalCost, 2));?>ms<?php endif;?>
-			<?php if(isset($message)):?><p class="error"><?php h($message);?></p><?php endif;?></td>
+			<?php if(isset($cost)):?>Cost <?php h(round($cost, 2)); ?>ms<?php endif;?>
+			<?php if(isset($totalCost)):?><?php h('/ '.round($totalCost, 2));?>ms<?php endif;?>
+			<?php if(isset($message)):?><p class="error"><?php h($message);?></p><?php endif;?>
+		</td>
 	</tr>
 </table>
 
