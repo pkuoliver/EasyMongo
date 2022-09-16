@@ -16,9 +16,9 @@ class LoginController extends BaseController {
 	public function doIndex() {
 		global $MONGO;
 
-		$password = trim(xn("password"));
-		$this->username = trim(xn("username"));
-		$this->db = trim(xn("db"));
+		$password = trim((string)xn("password"));
+		$this->username = trim((string)xn("username"));
+		$this->db = trim((string)xn("db"));
 		$this->hostIndex = xi("host");
 		$this->languages = rock_load_languages();
 		$this->expires = array(
