@@ -8,6 +8,13 @@ MongoDB: All versions above 3.0
 
 PHP: All versions above 5.6
 
+## Features
+* CURD operation very easy
+* Add/Remove index
+* Database/Replication state monitoring
+* Import/Export data
+* Performance tuning tool
+
 ## Installation
 Make sure that the mongodb extension is installed, then execute the following command:
 ~~~
@@ -22,6 +29,13 @@ Prepare config file.
 $ cp config.sample.php config.php
 ~~~
 Modify the database host/port and other related configurations to your own information.
+
+## Language support
+We support English, Chinese, Japanese, Portuguese, French, Spanish, German, Russian, Italian, Portugal, Turkish.
+
+## UI Preview
+![RUNOOB 图标](./screenshots/ss-main.png "Main UI")
+For more, please visit [sceenshots folder](./screenshots/)
 
 ## Thanks
 [Liu Xiaochao/iwind](https://github.com/iwind)

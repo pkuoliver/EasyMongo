@@ -30,6 +30,13 @@ cp config.sample.php config.php
 ~~~
 修改相关配置，就可以开始使用啦。
 
+## 语言支持
+本项目支持英语，汉语，日语，法语，德语，俄语，西班牙语，意大利语，土耳其语，葡萄牙语。
+
+## UI预览
+![RUNOOB 图标](./screenshots/ss-main.png "UI预览")
+查看更多预览图，请访问[sceenshots目录](./screenshots/)
+
 ## 致谢
 [Liu Xiaochao/iwind](https://github.com/iwind)
 

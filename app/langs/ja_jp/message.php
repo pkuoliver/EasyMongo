@@ -6,7 +6,7 @@
  * @version 1.0
  */
 
-$message["TRANSLATION_NAME"] = "日本語 - Jananese";
+$message["TRANSLATION_NAME"] = "日本語 - Japanese";
 $message["TRANSLATION_ID"] = 4;
 
 /** Login interface **/
