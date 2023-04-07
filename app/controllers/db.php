@@ -452,7 +452,7 @@ class DbController extends BaseController {
 	/** create new collection **/
 	public function doNewCollection() {
 		$this->db = xn("db");
-		$this->name = trim(xn("name"));
+		$this->name = trim((string)xn("name"));
 		$this->isCapped = xi("is_capped");
 		$this->size = xi("size");
 		$this->max = xi("max");
