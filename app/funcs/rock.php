@@ -84,9 +84,12 @@ function rock_cookie($name, $default = null) {
  * @param mixed $id id in mixed type
  */
 function rock_real_id($id) {
+	if($id == NULL) return NULL;
+	
 	if (is_object($id)) {
 		return $id;
 	}
+
 	if (preg_match("/^rid_(\\w+):(.+)$/", $id, $match)) {
 		$type = $match[1];
 		$value = $match[2];
