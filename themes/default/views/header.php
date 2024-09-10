@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 <title>EasyMongo</title>
 <?php if (php_sapi_name() === 'cli-server'): ?>
 <base href="/"/>

@@ -262,12 +262,12 @@ class RMongo {
 
 	/**
 	 * Get mongo php library version
-	 *
+	 * TODO: Uncaught Error: Class "Jean85\PrettyVersions" not found
 	 * @return string
 	 */
 	public static function getLibraryVersion() {
-		//return \Composer\InstalledVersions::getVersion('mongodb/mongodb');
-		return Jean85\PrettyVersions::getVersion('mongodb/mongodb')->getPrettyVersion();
+		return \Composer\InstalledVersions::getVersion('mongodb/mongodb');
+		//return Jean85\PrettyVersions::getVersion('mongodb/mongodb')->getPrettyVersion();
 	}
 
 	/**

@@ -150,6 +150,8 @@ $message["field_menu_new"] = "New";
 $message["field_menu_index"] = "Indexs";
 $message["field_menu_hide"] = "Hide";
 $message["field_menu_show"] = "Show";
+$message["coll_clear_rows_tips"] = "Are you sure to delete all records in collection %s?";
+$message["coll_remove_tips"] = "Are you sure to drop collection %s?";
 
 /** Add user **/
 $message["users"] = "Users";

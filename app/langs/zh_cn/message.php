@@ -41,7 +41,7 @@ $message["query"] = "查询";
 $message["refresh"] = "刷新";
 $message["insert"] = "插入";
 $message["add"] = "添加";
-$message["clear"] = "清除";
+$message["clear"] = "清空";
 $message["delete"] = "删除";
 $message["remove"] = "移除";
 $message["argument"] = "Argument";
@@ -150,6 +150,8 @@ $message["field_menu_new"] = "新建";
 $message["field_menu_index"] = "创建索引";
 $message["field_menu_hide"] = "隐藏";
 $message["field_menu_show"] = "展示";
+$message["coll_clear_rows_tips"] = "是否要清空集合 %s 中所有的记录?";
+$message["coll_remove_tips"] = "确定要删除集合 %s 吗?";
 
 /** Add user **/
 $message["users"] = "用户";

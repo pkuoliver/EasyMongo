@@ -234,9 +234,12 @@ function render_collection_menu($dbName, $collectionName) {
 	$params = xn();
 	$exportParams = $params;
 	$exportParams["can_download"] = 1;
+
+	$clearRowsTips = sprintf(rock_lang("coll_clear_rows_tips"), $collectionName);
+	$removeCollectionTips = sprintf(rock_lang("coll_remove_tips"), $collectionName);
 	$menuItems = array(
 		array( "action" => "collection.createRow", "params" => $params, "name" => rock_lang("insert") ),
-		array( "action" => "collection.clearRows", "params" => $params, "name" => rock_lang("clear"), "attr.onclick" => "return window.confirm('Are you sure to delete all records in collection \\'" . $collectionName . "\\'?');" ),
+		array( "action" => "collection.clearRows", "params" => $params, "name" => rock_lang("clear"), "attr.onclick" => "return window.confirm('$clearRowsTips');" ),
 		array( "action" => "#", "params" =>  array(), "name" => rock_lang("new_field"), "attr.onclick" => "fieldOpNew();return false;" ),
 		array( "action" => "collection.collectionStats", "params" => $params, "name" => rock_lang("statistics") ),
 		array( "action" => "collection.collectionExport", "params" => $exportParams, "name" => rock_lang("export") ),
@@ -247,7 +250,7 @@ function render_collection_menu($dbName, $collectionName) {
 		array( "action" => "collection.collectionDuplicate", "params" => $params, "name" => rock_lang("duplicate") ),
 		array( "action" => "collection.collectionTransfer", "params" => $params, "name" => rock_lang("transfer") ),
 		array( "action" => "collection.collectionValidate", "params" => $params, "name" => rock_lang("validate") ),
-		array( "action" => "collection.removeCollection", "params" => $params, "name" => rock_lang("drop"), "attr.onclick" => "return window.confirm('Are you sure to drop collection \\'" . $collectionName . "\\'?')" ),
+		array( "action" => "collection.removeCollection", "params" => $params, "name" => rock_lang("drop"), "attr.onclick" => "return window.confirm('$removeCollectionTips')" ),
 	);
 
 	//plugin
