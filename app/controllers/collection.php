@@ -870,7 +870,8 @@ window.parent.frames["left"].location.reload();
 
 			//Location Field
 			$locationField = trim(xn("location_field"));
-			$attrs[$locationField] = "2d";
+			$geoIndexType = trim(xn("location_index_type"));
+			$attrs[$locationField] = $geoIndexType;//"2dsphere" 或 "2d"
 
 			//Other Fields
 			$fields = xn("field");

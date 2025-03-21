@@ -53,11 +53,24 @@ $(function() {
 	</tr>
 	<tr>
 		<td valign="top"><?php hm("2d_index_location_field") ?></td>
-		<td><input type="text" name="location_field" size="30"/></td>
+		<td>
+			<input type="text" name="location_field" size="30"/> 
+			<select name="location_index_type">
+				<option value="2dsphere">2dsphere</option>
+				<option value="2d">2d</option>
+			</select> 
+		</td>
 	</tr>
 	<tr>
 		<td valign="top"><?php hm("other_fields"); ?></td>
-		<td><div id="fields"><input type="text" name="field[]" size="30"/> <select name="order[]"><option value="asc">ASC</option><option value="desc">DESC</option></select> <input type="button" value="+" onclick="addNewField()"/></div></td>
+		<td><div id="fields">
+			<input type="text" name="field[]" size="30"/> 
+			<select name="order[]">
+				<option value="asc">ASC</option>
+				<option value="desc">DESC</option>
+			</select> 
+			<input type="button" value="+" onclick="addNewField()"/>
+		</div></td>
 	</tr>
 	<tr>
 		<td><?php hm("2d_index_min_bound") ?></td>
